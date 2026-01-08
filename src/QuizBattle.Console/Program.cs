@@ -1,6 +1,6 @@
 ﻿using QuizBattle.Console;
 
-QuestionUtils.SeedQuestions();
+var questions = QuestionUtils.SeedQuestions();
 
 Console.Title = "QuizBattle – Konsol (v.2 dag 1–2)";
 Console.WriteLine("Välkommen till QuizBattle!");
