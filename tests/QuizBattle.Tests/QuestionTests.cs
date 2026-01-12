@@ -1,35 +1,21 @@
 ﻿using QuizBattle.Domain;
+using Xunit;
 
-namespace QuizBattle.Tests;
-
-public class QuestionTests
+namespace QuizBattle.Tests
 {
-    [Fact]
-    public void QuestionText_IsNull_ThrowsDomainException()
+    public class QuestionTests
     {
-        try
+        [Fact]
+        public void Constructor_NullParameters_ThrowsDomainException()
         {
-            var question = new Question(null!, null!, null!, null!);
-            Assert.Fail("Expected to throw DomainException with null parameters.");
+            Assert.Throws<DomainException>(() => new Question(null!, null!, null!, null!));
         }
-        catch(DomainException){ }
-    }
 
-    [Fact]
-    public void QuestionChoices_LessThanThree_ThrowsDomainException()
-    {
-
-        try
+        [Fact]
+        public void Constructor_EmptyChoices_ThrowsDomainException()
         {
-            var question = new Question(
-                "Q1",
-                "Question",
-                new Choice[] { },
-                ""
-                );
-            Assert.Fail("Must throw when less than three choices");
-
+            Assert.Throws<DomainException>(() =>
+                new Question("Q1", "Question", new Choice[] { }, ""));
         }
-        catch(DomainException) { }
     }
 }

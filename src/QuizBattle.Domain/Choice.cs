@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace QuizBattle.Domain
 {
     public class Choice

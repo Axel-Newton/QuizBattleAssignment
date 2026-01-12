@@ -1,11 +1,14 @@
-﻿using QuizBattle.Domain;
+using QuizBattle.Domain;
 
 namespace QuizBattle.Console.Extensions
 {
-    // små extensions för att hålla Program.cs läsbar
-    public static class QuestionViewExtensions
+    /// <summary>
+    /// Små extensions för att hålla Program.cs läsbar.
+    /// </summary>
+    public static class QuestionExtensions
     {
-        public static int ChoicesCount(this Question q) => q.Choices.Count;
-        public static Choice ChoiceAt(this Question q, int index) => q.Choices[index];
+        public static int GetChoiceCount(this Question question) => question.Choices.Count;
+
+        public static Choice GetChoiceAt(this Question question, int index) => question.Choices[index];
     }
 }
