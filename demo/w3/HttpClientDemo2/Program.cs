@@ -1,10 +1,12 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using System.Text.Json;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // 1. Registrera en namngiven klient
 // Vi sätter bas-inställningarna här så vi slipper upprepa dem.
 builder.Services.AddHttpClient("GitHubClient", client =>
 {
-    client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/posts");
+    client.BaseAddress = new Uri("https://api.github.com/");
     // GitHub KRAV: En User-Agent måste finnas, annars får du 403 Forbidden.
     client.DefaultRequestHeaders.UserAgent.ParseAdd("MinEnklaDemoApp");
 });
@@ -15,13 +17,13 @@ var app = builder.Build();
 app.MapGet("/", async (IHttpClientFactory factory) =>
 {
     // Skapa klienten baserat på namnet vi angav ovan
-    var client = factory.CreateClient("placeholder");
+    var client = factory.CreateClient("GitHubClient");
 
     // Gör anropet (hämtar rå JSON-text eftersom vi inte har någon DTO)
+    string json = await client.GetStringAsync("users/github");
 
-    
-
-    string json = await client.GetStringAsync("/posts");
+    // Serialisera json till ett objekt
+    var content = await Seri
 
     return json;
 });
