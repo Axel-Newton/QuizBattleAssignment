@@ -9,10 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizBattle.Console", "src\Q
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{DF516102-7CCD-4543-9FD0-F9CF2210B23D}"
 	ProjectSection(SolutionItems) = preProject
-		docs\arkitektur.md = docs\arkitektur.md
-		docs\TODO-2026-01-08.md = docs\TODO-2026-01-08.md
-		docs\TODO-2026-01-09.md = docs\TODO-2026-01-09.md
-		docs\TODO-2026-01-13.md = docs\TODO-2026-01-13.md
+		docs\CHANGELOG.md = docs\CHANGELOG.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizBattle.Domain", "src\QuizBattle.Domain\QuizBattle.Domain.csproj", "{FAC7D063-2F6F-4D27-B5E4-F64E767BACB6}"
@@ -32,6 +29,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{F75749
 		src\QuizBattle.Console\README.Console.md = src\QuizBattle.Console\README.Console.md
 		src\QuizBattle.Domain\README.Domain.md = src\QuizBattle.Domain\README.Domain.md
 		src\QuizBattle.Infrastructure\README.Infrastructure.md = src\QuizBattle.Infrastructure\README.Infrastructure.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About", "About", "{743D0AD2-8849-4483-84A0-A3979EC54D33}"
+	ProjectSection(SolutionItems) = preProject
+		docs\arkitektur.md = docs\arkitektur.md
+		docs\overview.md = docs\overview.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TODO", "TODO", "{C9AB0E24-F730-4B29-9308-8D74900AC2D5}"
+	ProjectSection(SolutionItems) = preProject
+		docs\TODO-2026-01-08.md = docs\TODO-2026-01-08.md
+		docs\TODO-2026-01-09.md = docs\TODO-2026-01-09.md
+		docs\TODO-2026-01-13.md = docs\TODO-2026-01-13.md
 	EndProjectSection
 EndProject
 Global
@@ -115,6 +125,8 @@ Global
 		{CDE6A825-00DA-4472-8ABC-3BC2B6BC0813} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{C694E60B-4C67-49F0-86D9-6D1E5E61F49B} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{F7574918-BD27-4DD5-A54D-FA46589952A7} = {DF516102-7CCD-4543-9FD0-F9CF2210B23D}
+		{743D0AD2-8849-4483-84A0-A3979EC54D33} = {DF516102-7CCD-4543-9FD0-F9CF2210B23D}
+		{C9AB0E24-F730-4B29-9308-8D74900AC2D5} = {DF516102-7CCD-4543-9FD0-F9CF2210B23D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {993931F4-7127-4F03-B7AD-ED9CAF243ECC}
