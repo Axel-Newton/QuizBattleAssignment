@@ -55,8 +55,8 @@ foreach (var question in start.Questions)
     // Registrera svar i applikationen (handlers via SessionService)
     var answerResult = await sessionService.AnswerAsync(start.SessionId, question.Code, selectedCode);
 
-    System.Console.WriteLine(answerResult.IsCorrect ? "✔ Rätt!" : "✖ Fel.");
-    if (answerResult.IsCorrect) score++;
+    System.Console.WriteLine(answerResult.IsCorrectAnswer ? "✔ Rätt!" : "✖ Fel.");
+    if (answerResult.IsCorrectAnswer) score++;
     System.Console.WriteLine();
 }
 
